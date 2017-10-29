@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker3.css">   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.js"></script>            
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/locales/bootstrap-datepicker.pt.min.js"></script>    
+    <link rel="stylesheet" href="powerange-master/dist/powerange.css"/>
+    <!-- <script src="powerange-master/dist/powerange.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/media.css">    
+    <script src="main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-defautl">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Маршруты</a></li>
+                <li><a href="#">Расписание походов</a></li>
+                <li><a href="#">Инструкторы</a></li>
+                <li><a href="#">Прокат</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Полезная информация</a></li>
+                <li><a href="#">Вопросы/Ответы</a></li>
+                <li><a href="#">Новости</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 page-heading">
+                <h1>Маршруты</h1>
+                <div id="dd" class="wrapper-dropdown">
+                    <p id="dd-choice">Самые ближайшие</p>
+                    <ul class="dropdown">
+                        <li><a href="#">Самые ближайшие</a></li>
+                        <li><a href="#">Самые дорогие</a></li>
+                        <li><a href="#">Самые дешевые</a></li>
+                    </ul>
+                    <span class="glyphicon glyphicon-menu-down"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 col-xs-12 side-bar">
+                <div class="row">
+                    <div class="col-sm-12 filter">
+                        <div class="date">
+                            <p>Дата</p>
+                            <input type="text" id="datepicker" placeholder="1.01.16 - 1.03.16"/>
+                        </div>
+                        <div class="place">
+                            <p>Место проведения</p>
+                            <input type="text" id="place" placeholder="Кавказ">
+                        </div>
+                        <div class="duration">
+                            <p>Количество дней</p>
+                            <input type="number" id="duration" placeholder="Выберите количество">
+                        </div>
+                        <div class="price">
+                            <p>Цена</p>
+                            <div class="range-bar">
+                                <span class="range-handle min"></span>
+                                <span class="range-handle max"></span>
+                            </div>
+                            <span class="min-price">100</span>
+                            <span class="max-price">1800</span>
+                        </div>
+                        <div class="difficulty">
+                            <p>Сложность</p>
+                            <div class="difficulty-level"><span>1</span></div>
+                            <div class="difficulty-level active"><span>2</span></div>
+                            <div class="difficulty-level"><span>3</span></div>
+                            <div class="difficulty-level"><span>4</span></div>
+                            <div class="difficulty-level"><span>5</span></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 banner-1">
+                        <div class="banner-top text-center">
+                            <h4>Специальное предложение</h4>
+                            <p><span>$750 -</span> <span>$650</span></p>
+                        </div>
+                        <div class="banner-bottom text-center">
+                            <h4>Трекинг к базовому лагерю Эвереста + озера Гокио</h4>
+                            <div>
+                                <div class="time-left">
+                                    <span id="days-left">5</span>
+                                    <p>Дней</p> 
+                                </div>
+                                <div class="time-left">
+                                    <span id="hours-left">06</span>
+                                    <p>Час.</p> 
+                                </div>
+                                <div class="time-left">
+                                    <span id="min-left">14</span>
+                                    <p>Мин.</p> 
+                                </div>
+                                <div class="time-left">
+                                    <span id="sec-left">28</span>
+                                    <p>Сек.</p> 
+                                </div>
+                            </div>
+                            <a href="#" id="apply">Подать заявку</a>
+            
+                        </div>
+                    </div>
+                    <div class="col-sm-12 banner-2">
+                        <h4 class="text-center">Направление походов</h4>
+                        <div class="banner-block">
+                        
+                        </div>
+                    </div>
+                    <div class="col-sm-12 directions">
+                        <div class="directions-list">
+                            <form>
+                                <p>
+                                    <input type="checkbox" id="bolgaria">
+                                    <label for="bolgaria">Болгария</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="islandia">
+                                    <label for="islandia">Исландия</label> 
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="karpaty" checked="checked">
+                                    <label for="karpaty">Карпаты</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="rumynia" disabled="disabled">
+                                    <label for="rumynia">Румыния</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="chernogoria">
+                                    <label for="chernogoria">Черногория</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="kipr">
+                                    <label for="kipr">Кипр</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="tjanshan">
+                                    <label for="tjanshan">Тянь-Шань</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="marokko">
+                                    <label for="marokko">Марокко</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="norvegia">
+                                    <label for="norvegia">Норвегия</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="turtsia">
+                                    <label for="turtsia">Турция</label> 
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="tadzhykistan">
+                                    <label for="tadzhykistan">Таджикистан</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="meksika">
+                                    <label for="meksika">Мексика</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="korsika">
+                                    <label for="korsika">Корсика</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="pamir">
+                                    <label for="pamir">Памир</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="ural">
+                                    <label for="ural">Урал</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="abhazia">
+                                    <label for="abhazia">Абхазия</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="gruzia">
+                                    <label for="gruzia">Грузия</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="kavkaz">
+                                    <label for="kavkaz">Кавказ</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="tanzania">
+                                    <label for="tanzania">Танзания</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="nepal">
+                                    <label for="nepal">Непал</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="peru">
+                                    <label for="peru">Перу</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="kanary">
+                                    <label for="kanary">Канарские острова</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="rejunjon">
+                                    <label for="rejunjon">Реюньон</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="argentina">
+                                    <label for="argentina">Аргентина</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="bolivia">
+                                    <label for="bolivia">Боливия</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="chili">
+                                    <label for="chili">Чили</label>
+                                    <span class="glyphicon glyphicon-menu-down"></span>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-9 col-xs-12 main-content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="col-sm-12 month">
+                            <p>Март 2016</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-12 route-item">
+                        <div class="col-sm-5 col-md-4 img-wrapper">
+                            <img src="img/mount.png" class="img-responsive">
+                        </div>
+                        <div class="col-sm-7 col-md-8 route-info">
+                            <div class="route-info-main clearfix">
+                                <h3>Зимний поход на Поп-Иван Черногорский</h3>
+                                <span id="price">$1200</span>
+                            </div>
+                            <div class="route-info-details clearfix">
+                                <p><span class="glyphicon glyphicon-calendar"></span><span id="start-day">19.02.16</span> - <span id="end-day">21.02.16</span></p>
+                                <div class="details">
+                                    <p>Продолжительность:<span>3 дня (2 ночи)</span></p>
+                                    <p>Длина похода:<span>20км</span></p>
+                                    <p>Сложность: <span class="glyphicon glyphicon-info-sign"></span> <span><span>1</span><span>2</span><span>3</span><span class="active">4</span><span>5</span></span></p>
+                                </div> 
+                                <div class="more">
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 route-item">
+                        <div class="col-sm-5 col-md-4 img-wrapper">
+                            <img src="img/mount.png" class="img-responsive">
+                        </div>
+                        <div class="col-sm-7 col-md-8 route-info">
+                            <div class="route-info-main clearfix">
+                                <h3>Зимний поход на Поп-Иван Черногорский</h3>
+                                <span id="price">$1200</span>
+                            </div>
+                            <div class="route-info-details clearfix">
+                                <p><span class="glyphicon glyphicon-calendar"></span><span id="start-day">19.02.16</span> - <span id="end-day">21.02.16</span></p>
+                                <div class="details">
+                                    <p>Продолжительность:<span>3 дня (2 ночи)</span></p>
+                                    <p>Длина похода:<span>20км</span></p>
+                                    <p>Сложность: <span class="glyphicon glyphicon-info-sign"></span> <span><span>1</span><span>2</span><span>3</span><span class="active">4</span><span>5</span></span></p>
+                                </div> 
+                                <div class="more">
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 route-item">
+                        <div class="col-sm-5 col-md-4 img-wrapper">
+                            <img src="img/mount.png" class="img-responsive">
+                        </div>
+                        <div class="col-sm-7 col-md-8 route-info">
+                            <div class="route-info-main clearfix">
+                                <h3>Зимний поход на Поп-Иван Черногорский</h3>
+                                <span id="price">$1200</span>
+                            </div>
+                            <div class="route-info-details clearfix">
+                                <p><span class="glyphicon glyphicon-calendar"></span><span id="start-day">19.02.16</span> - <span id="end-day">21.02.16</span></p>
+                                <div class="details">
+                                    <p>Продолжительность:<span>3 дня (2 ночи)</span></p>
+                                    <p>Длина похода:<span>20км</span></p>
+                                    <p>Сложность: <span class="glyphicon glyphicon-info-sign"></span> <span><span>1</span><span>2</span><span>3</span><span class="active">4</span><span>5</span></span></p>
+                                </div> 
+                                <div class="more">
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <div class="col-sm-12 month">
+                            <p>Март 2016</p>
+                        </div>
+                    </div>
+                
+                    <div class="col-sm-12 route-item">
+                        <div class="col-sm-5 col-md-4 img-wrapper">
+                            <img src="img/mount.png" class="img-responsive">
+                        </div>
+                        <div class="col-sm-7 col-md-8 route-info">
+                            <div class="route-info-main clearfix">
+                                <h3>Зимний поход на Поп-Иван Черногорский</h3>
+                                <span id="price">$1200</span>
+                            </div>
+                            <div class="route-info-details clearfix">
+                                <p><span class="glyphicon glyphicon-calendar"></span><span id="start-day">19.02.16</span> - <span id="end-day">21.02.16</span></p>
+                                <div class="details">
+                                    <p>Продолжительность:<span>3 дня (2 ночи)</span></p>
+                                    <p>Длина похода:<span>20км</span></p>
+                                    <p>Сложность: <span class="glyphicon glyphicon-info-sign"></span> <span><span>1</span><span>2</span><span>3</span><span class="active">4</span><span>5</span></span></p>
+                                </div> 
+                                <div class="more">
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 route-item">
+                        <div class="col-sm-5 col-md-4 img-wrapper">
+                            <img src="img/mount.png" class="img-responsive">
+                        </div>
+                        <div class="col-sm-7 col-md-8 route-info">
+                            <div class="route-info-main clearfix">
+                                <h3>Зимний поход на Поп-Иван Черногорский</h3>
+                                <span id="price">$1200</span>
+                            </div>
+                            <div class="route-info-details clearfix">
+                                <p><span class="glyphicon glyphicon-calendar"></span><span id="start-day">19.02.16</span> - <span id="end-day">21.02.16</span></p>
+                                <div class="details">
+                                    <p>Продолжительность:<span>3 дня (2 ночи)</span></p>
+                                    <p>Длина похода:<span>20км</span></p>
+                                    <p>Сложность: <span class="glyphicon glyphicon-info-sign"></span> <span><span>1</span><span>2</span><span>3</span><span class="active">4</span><span>5</span></span></p>
+                                </div> 
+                                <div class="more">
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 route-item">
+                        <div class="col-sm-5 col-md-4 img-wrapper">
+                            <img src="img/mount.png" class="img-responsive">
+                        </div>
+                        <div class="col-sm-7 col-md-8 route-info">
+                            <div class="route-info-main clearfix">
+                                <h3>Зимний поход на Поп-Иван Черногорский</h3>
+                                <span id="price">$1200</span>
+                            </div>
+                            <div class="route-info-details clearfix">
+                                <p><span class="glyphicon glyphicon-calendar"></span><span id="start-day">19.02.16</span> - <span id="end-day">21.02.16</span></p>
+                                <div class="details">
+                                    <p>Продолжительность:<span>3 дня (2 ночи)</span></p>
+                                    <p>Длина похода:<span>20км</span></p>
+                                    <p>Сложность: <span class="glyphicon glyphicon-info-sign"></span> <span><span>1</span><span>2</span><span>3</span><span class="active">4</span><span>5</span></span></p>
+                                </div> 
+                                <div class="more">
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div> 
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

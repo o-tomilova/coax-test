@@ -1,0 +1,98 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .route-info-main {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .route-info-main h3 {
+      font-size: 18px;
+      line-height: 22px; }
+    .route-info-main span {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 50px; }
+
+  .route-info-details p {
+    margin-bottom: 0; }
+
+  .route-info .more {
+    padding-top: 20px; }
+    .route-info .more a {
+      padding: 10px 15px; } }
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .route-info .details {
+    width: 100%; }
+  .route-info .more {
+    width: 100%;
+    padding-top: 20px; }
+    .route-info .more a {
+      padding: 10px 15px; }
+
+  .banner-1 {
+    height: 440px; }
+
+  .img-wrapper {
+    margin-top: 15px; }
+
+  .directions-list label {
+    font-size: 12px;
+    padding-left: 2.5em !important; }
+
+  .difficulty-level {
+    margin: 5px 5px; }
+
+  .difficulty-level:nth-child(5) {
+    margin-left: 0px; }
+
+  .filter input {
+    font-size: 11px; } }
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .month {
+    padding-top: 5px;
+    padding-bottom: 5px; }
+
+  .route-info-main {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .route-info-main h3 {
+      font-size: 22px;
+      line-height: 22px; }
+    .route-info-main span {
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 50px; }
+
+  .route-info {
+    padding-left: 15px;
+    margin-top: 20px; }
+    .route-info .details {
+      width: 70%; }
+    .route-info .more {
+      width: 30%;
+      padding-top: 25px; }
+      .route-info .more a {
+        padding: 15px 20px; }
+
+  .banner-1 {
+    height: 270px; }
+
+  .filter input {
+    font-size: 14px; } }
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .route-info .details {
+    width: 100%; }
+  .route-info .more {
+    width: 100%; }
+
+  .page-heading h1 {
+    margin-bottom: 15px;
+    margin-right: 60px; }
+
+  .wrapper-dropdown {
+    width: 200px;
+    float: left; } }
+/* Custom, iPhone Retina */
+
+/*# sourceMappingURL=media.css.map */
